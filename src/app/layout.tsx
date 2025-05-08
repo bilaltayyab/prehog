@@ -32,9 +32,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
       >
         <header className="py-4 px-6 border-b">
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-black">
+          <Link href="/" className="flex items-center gap-2 text-2xl font-bold">
             <Image
-              src="https://storage.googleapis.com/res_blockflow_gcp_europe-west1_prod_public_029c757d-417e-49f5-bd11-367fe34950b3/users/user_q00v3t0tpqgije8k264n1q1r/049208af-bca9-4e51-bd5b-5e2c87e24a44.png"
+              src="https://posthog.com/images/posthog-logo.svg"
               alt="PostHog Logo"
               width={165} 
               height={40}
