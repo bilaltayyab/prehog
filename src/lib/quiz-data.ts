@@ -14,8 +14,7 @@ export interface Personality {
   name: string;
   emoji: string;
   description: string;
-  image: string;
-  imageHint: string;
+  // image and imageHint removed
 }
 
 export type PersonalityId =
@@ -33,8 +32,6 @@ export const personalities: Personality[] = [
     emoji: '👑',
     description:
       'You read changelogs for fun. You believe in documentation, collaboration, and owning your code like a majestic Linux warlock.',
-    image: 'https://picsum.photos/seed/overlord/400/300',
-    imageHint: 'code computer',
   },
   {
     id: 'startupSadboi',
@@ -42,8 +39,6 @@ export const personalities: Personality[] = [
     emoji: '🫠',
     description:
       "You cry in TypeScript. But you care deeply. You’re driven by vision, VC fear, and vibes. You make memes and MVPs with equal passion.",
-    image: 'https://picsum.photos/seed/sadboi/400/300',
-    imageHint: 'tired coder',
   },
   {
     id: 'dataGremlin',
@@ -51,8 +46,6 @@ export const personalities: Personality[] = [
     emoji: '🐀',
     description:
       'Your natural habitat is the analytics dashboard. You find bugs by sniffing out anomalies like a bloodhound in a datacenter.',
-    image: 'https://picsum.photos/seed/gremlin/400/300',
-    imageHint: 'chart graph',
   },
   {
     id: 'featureFlagFairy',
@@ -60,8 +53,6 @@ export const personalities: Personality[] = [
     emoji: '🧚',
     description:
       'You sprinkle toggles and magic all over your codebase. Risk mitigation is your love language. You believe nothing should go live without a kill switch.',
-    image: 'https://picsum.photos/seed/fairy/400/300',
-    imageHint: 'glowing switch',
   },
   {
     id: 'productPirate',
@@ -69,8 +60,6 @@ export const personalities: Personality[] = [
     emoji: '🏴‍☠️',
     description:
       'MVP now, iterate later. You love breaking rules and deploying straight to prod. You’ve been banned from staging more times than GitHub can count.',
-    image: 'https://picsum.photos/seed/pirate/400/300',
-    imageHint: 'ship pirate',
   },
   {
     id: 'funnelWitch',
@@ -78,8 +67,6 @@ export const personalities: Personality[] = [
     emoji: '🔮',
     description:
       'You conjure conversions with mysterious rituals (and event tracking). Your superpower is finding where users drop off before anyone else.',
-    image: 'https://picsum.photos/seed/witch/400/300',
-    imageHint: 'mystic analytics',
   },
 ];
 
@@ -98,7 +85,7 @@ export const questions: QuizQuestion[] = [
     id: 'q2',
     text: 'How do you name your feature flags?',
     answers: [
-      { text: 'test-flag-123-final-v2', scores: { funnelWitch: 1 } }, // Originally Funnel Witch, seems a bit off, maybe sadboi? Keeping as per spec.
+      { text: 'test-flag-123-final-v2', scores: { funnelWitch: 1 } }, 
       { text: 'feature_autoplay_destroyer', scores: { featureFlagFairy: 1 } },
       { text: 'plswork', scores: { startupSadboi: 1 } },
       { text: 'I use random emoji + chaos', scores: { productPirate: 1 } },
