@@ -33,13 +33,12 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <header className="py-4 px-6 border-b">
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
+          <Link href="/" className="flex items-center gap-2 text-2xl font-bold">
             <Image
               src="https://posthog.com/images/posthog-logo.svg"
               alt="PostHog Logo"
               width={165} 
               height={40}
-              className="h-10 w-auto" 
               priority
             />
           </Link>
@@ -55,3 +54,4 @@ export default function RootLayout({
     </html>
   );
 }
+
