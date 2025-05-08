@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'PostHog Personality Quiz',
+  title: 'PreHog Personality Quiz',
   description: 'Discover your developer personality with this fun quiz!',
 };
 
@@ -29,11 +29,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
-        // Removed duplicate suppressHydrationWarning from body as it's on html tag
       >
         <header className="py-4 px-6 border-b">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-3xl font-bold text-foreground">PostHog</span>
+            <span className="text-3xl font-bold text-foreground">PreHog</span>
           </Link>
         </header>
         <main className="flex-grow flex flex-col items-center justify-center p-4">
@@ -47,3 +46,4 @@ export default function RootLayout({
     </html>
   );
 }
+
