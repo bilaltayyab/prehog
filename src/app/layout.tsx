@@ -28,11 +28,18 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
+        suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
       >
         <header className="py-4 px-6 border-b">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-3xl font-bold text-foreground">PreHog</span>
+            {/* Using Geist font for "PreHog" */}
+            <span 
+              className="text-3xl font-bold text-foreground" 
+              style={{ fontFamily: 'var(--font-geist-sans)' }}
+            >
+              PreHog
+            </span>
           </Link>
         </header>
         <main className="flex-grow flex flex-col items-center justify-center p-4">
