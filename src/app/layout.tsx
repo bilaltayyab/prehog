@@ -31,14 +31,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
       >
         <header className="py-4 px-6 border-b">
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
-            <svg 
-              width="32" 
-              height="32" 
-              viewBox="0 0 160 40" 
-              fill="none" 
+          <Link href="/" className="flex items-center gap-2 text-2xl font-bold">
+            <svg
+              viewBox="0 0 160 40"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              className="h-7 w-auto"
+              className="h-10 w-auto"
             >
               <title>PostHog Logo</title>
               {/* Parallelograms */}
