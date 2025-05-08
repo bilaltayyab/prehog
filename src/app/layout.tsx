@@ -30,9 +30,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
+        suppressHydrationWarning
       >
         <header className="py-4 px-6 border-b">
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold">
+          <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-foreground">
             <Image
               src="https://posthog.com/images/posthog-logo.svg"
               alt="PostHog Logo"
