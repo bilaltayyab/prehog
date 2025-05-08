@@ -43,7 +43,7 @@ export const personalities: Personality[] = [
     description:
       "You cry in TypeScript. But you care deeply. You’re driven by vision, VC fear, and vibes. You make memes and MVPs with equal passion.",
     image: 'https://picsum.photos/seed/sadboi/400/300',
-    imageHint: 'sad computer',
+    imageHint: 'tired coder',
   },
   {
     id: 'dataGremlin',
@@ -61,7 +61,7 @@ export const personalities: Personality[] = [
     description:
       'You sprinkle toggles and magic all over your codebase. Risk mitigation is your love language. You believe nothing should go live without a kill switch.',
     image: 'https://picsum.photos/seed/fairy/400/300',
-    imageHint: 'magic sparkle',
+    imageHint: 'glowing switch',
   },
   {
     id: 'productPirate',
@@ -79,7 +79,7 @@ export const personalities: Personality[] = [
     description:
       'You conjure conversions with mysterious rituals (and event tracking). Your superpower is finding where users drop off before anyone else.',
     image: 'https://picsum.photos/seed/witch/400/300',
-    imageHint: 'crystal ball',
+    imageHint: 'mystic analytics',
   },
 ];
 
