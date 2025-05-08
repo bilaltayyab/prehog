@@ -4,24 +4,24 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%; /* White */
+    --background: 75 17% 92.5%; /* #eeefe9 */
     --foreground: 0 0% 9%;   /* Dark Gray/Black */
-    --card: 0 0% 100%;
+    --card: 0 0% 100%; /* White */
     --card-foreground: 0 0% 9%;
-    --popover: 0 0% 100%;
+    --popover: 0 0% 100%; /* White */
     --popover-foreground: 0 0% 9%;
     --primary: 221 83% 53%; /* Blue from PostHog link */
     --primary-foreground: 0 0% 100%; /* White for text on primary */
-    --secondary: 220 14% 95%; /* Light Gray */
+    --secondary: 0 0% 96%; /* Neutral Light Gray #f5f5f5 */
     --secondary-foreground: 0 0% 9%;
-    --muted: 210 17% 98%; /* Very Light Gray */
-    --muted-foreground: 220 9% 48%; /* Medium Gray */
+    --muted: 0 0% 98%; /* Neutral Very Light Gray #fafafa */
+    --muted-foreground: 0 0% 40%; /* Neutral Medium-Dark Gray #666666 */
     --accent: 120 73% 75%; /* Vibrant Green from original proposal */
     --accent-foreground: 0 0% 0%; /* Black for text on accent */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 90%; /* Light Gray for borders */
-    --input: 220 14% 95%; /* Light Gray for input backgrounds */
+    --border: 0 0% 88%; /* Neutral Light Gray for borders #e0e0e0 */
+    --input: 0 0% 96%; /* Neutral Light Gray for input backgrounds #f5f5f5 */
     --ring: 221 83% 53%; /* Blue for focus rings */
     
     --chart-1: 12 76% 61%;
@@ -31,6 +31,7 @@
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
 
+    /* Sidebar colors remain as they are unless specified further */
     --sidebar-background: 210 17% 98%; /* Very Light Gray */
     --sidebar-foreground: 0 0% 9%;   /* Dark Gray/Black */
     --sidebar-primary: 221 83% 53%; /* Blue */
