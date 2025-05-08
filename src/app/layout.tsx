@@ -4,7 +4,6 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import Link from 'next/link';
-import Image from 'next/image';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -30,17 +29,11 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
-        suppressHydrationWarning
+        // Removed duplicate suppressHydrationWarning from body as it's on html tag
       >
         <header className="py-4 px-6 border-b">
-          <Link href="/" className="flex items-center gap-2 text-2xl font-bold">
-            <Image
-              src="https://posthog.com/images/posthog-logo.svg"
-              alt="PostHog Logo"
-              width={165} 
-              height={40}
-              priority
-            />
+          <Link href="/" className="flex items-center gap-2">
+            <span className="text-3xl font-bold text-foreground">PostHog</span>
           </Link>
         </header>
         <main className="flex-grow flex flex-col items-center justify-center p-4">
@@ -54,4 +47,3 @@ export default function RootLayout({
     </html>
   );
 }
-
