@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 import Link from 'next/link';
+import { PHProvider } from './posthog-provider';
+import { PageViewTracker } from './pageview-tracker';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -18,6 +20,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'PreHog Personality Quiz',
   description: 'Discover your developer personality with this fun quiz!',
+  icons: {
+    icon: '/hedgehog.svg', // Assumes hedgehog.svg is in the /public folder
+  },
 };
 
 export default function RootLayout({
@@ -31,26 +36,27 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
       >
-        <header className="py-4 px-6 border-b">
-          <Link href="/" className="flex items-center gap-2">
-            {/* Using Geist font for "PreHog" */}
-            <span 
-              className="text-3xl font-bold text-foreground" 
-              style={{ fontFamily: 'var(--font-geist-sans)' }}
-            >
-              PreHog
-            </span>
-          </Link>
-        </header>
-        <main className="flex-grow flex flex-col items-center justify-center p-4">
-          {children}
-        </main>
-        <footer className="text-center p-6 border-t text-sm text-muted-foreground">
-          Inspired by PostHog. Check out the real <a href="https://posthog.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">PostHog</a>.
-        </footer>
-        <Toaster />
+        <PHProvider>
+          <PageViewTracker />
+          <header className="py-4 px-6 border-b">
+            <Link href="/" className="flex items-center gap-2">
+              <span 
+                className="text-3xl font-bold text-foreground" 
+                style={{ fontFamily: 'var(--font-geist-sans)' }}
+              >
+                PreHog
+              </span>
+            </Link>
+          </header>
+          <main className="flex-grow flex flex-col items-center justify-center p-4">
+            {children}
+          </main>
+          <footer className="text-center p-6 border-t text-sm text-muted-foreground">
+            Inspired by PostHog. Check out the real <a href="https://posthog.com" target="_blank" rel="noopener noreferrer" className="underline hover:text-primary">PostHog</a>.
+          </footer>
+          <Toaster />
+        </PHProvider>
       </body>
     </html>
   );
 }
-
