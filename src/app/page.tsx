@@ -15,8 +15,8 @@ export default function WelcomePage() {
           <div className="mx-auto text-6xl mb-4" aria-label="Hedgehog emoji">
             🦔
           </div>
-          <CardTitle className="text-3xl md:text-4xl font-extrabold text-primary">
-            Discover Your Inner PostHog!
+          <CardTitle className="text-3xl md:text-4xl font-extrabold">
+            Discover Your <em className="text-primary italic">Scientific*</em> PostHog Personality!
           </CardTitle>
           <CardDescription className="text-lg md:text-xl text-foreground/90 pt-2">
             Are you a Data Gremlin, a Feature Flag Fairy, or perhaps a Product Pirate?
@@ -38,6 +38,9 @@ export default function WelcomePage() {
                 <Rocket className="ml-2 h-5 w-5" />
               </Button>
             </Link>
+            <p className="text-xs text-muted-foreground pt-4">
+              *Not actually scientific. At all. Just for fun!
+            </p>
           </div>
         </CardContent>
       </Card>
