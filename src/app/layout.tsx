@@ -7,7 +7,8 @@ import { Toaster } from '@/components/ui/toaster';
 import Link from 'next/link';
 import { PHProvider } from './posthog-provider';
 import { PageViewTracker } from './pageview-tracker';
-import PostHogInit from './PostHogInit'; // 👈 new component
+import PostHogInit from './PostHogInit';
+import React from 'react'; // Import React
 
 const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] });
 const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] });
@@ -32,8 +33,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} font-sans flex flex-col min-h-screen bg-background text-foreground`}
       >
         <PHProvider>
-          <PageViewTracker />
-          <PostHogInit /> {/* ✅ Insert PostHog Script Here */}
+          <PostHogInit />
+          <React.Suspense fallback={null}>
+            <PageViewTracker />
+          </React.Suspense>
           <header className="py-4 px-6 border-b">
             <Link href="/" className="flex items-center gap-2">
               <span className="text-3xl font-bold text-foreground" style={{ fontFamily: 'var(--font-geist-sans)' }}>
